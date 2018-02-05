@@ -1,0 +1,70 @@
+D:\phpStudy\MySQL\bin\mysqld.exe, Version: 5.5.53 (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+180123 12:52:10	   66 Query	select database()
+180123 12:52:33	   66 Query	SET autocommit=1
+		   66 Query	SHOW VARIABLES LIKE 'log_bin'
+		   66 Query	select database()
+180123 12:53:11	   66 Quit	
+180123 12:53:21	   67 Connect	root@localhost on shop
+		   67 Query	SET AUTOCOMMIT = 0
+		   67 Query	INSERT INTO EMPLOYEE(FIRST_NAME, AGE, SEX) VALUES ('xiaoming',31,'b'),('hong',22,'g'),('wang',90,'m')
+		   67 Query	COMMIT
+		   67 Quit	
+180123 12:53:31	   68 Connect	root@localhost on shop
+		   68 Query	SET AUTOCOMMIT = 0
+		   68 Query	SELECT * FROM EMPLOYEE WHERE FIRST_NAME= 'Mac'
+		   68 Query	SELECT * FROM EMPLOYEE WHERE INCOME >1000
+		   68 Quit	
+180123 12:53:42	   61 Query	SET autocommit=1
+		   61 Query	SELECT t.* FROM shop.employee t
+180123 12:53:47	   69 Connect	root@localhost on shop
+		   69 Query	SET AUTOCOMMIT = 0
+		   69 Query	SELECT * FROM EMPLOYEE WHERE FIRST_NAME= 'Mac'
+		   69 Query	SELECT * FROM EMPLOYEE WHERE INCOME >1000
+		   69 Quit	
+180123 12:53:56	   61 Query	SET autocommit=1
+		   61 Query	SET SQL_SELECT_LIMIT=DEFAULT
+		   61 Query	UPDATE `shop`.`employee` t SET t.`LAST_NAME` = '' WHERE t.`FIRST_NAME` LIKE 'wang' ESCAPE '#' AND t.`LAST_NAME` IS NULL AND t.`AGE` = 90 AND t.`SEX` LIKE 'm' ESCAPE '#' AND t.`INCOME` IS NULL
+		   61 Query	SET autocommit=1
+		   61 Query	SET SQL_SELECT_LIMIT=502
+		   61 Query	SELECT t.* FROM shop.employee t
+180123 12:53:58	   61 Query	SET autocommit=1
+		   61 Query	SET SQL_SELECT_LIMIT=DEFAULT
+		   61 Query	UPDATE `shop`.`employee` t SET t.`LAST_NAME` = '' WHERE t.`FIRST_NAME` LIKE 'hong' ESCAPE '#' AND t.`LAST_NAME` IS NULL AND t.`AGE` = 22 AND t.`SEX` LIKE 'g' ESCAPE '#' AND t.`INCOME` IS NULL
+		   61 Query	SET autocommit=1
+		   61 Query	SET SQL_SELECT_LIMIT=502
+		   61 Query	SELECT t.* FROM shop.employee t
+180123 12:54:00	   61 Query	SET autocommit=1
+		   61 Query	SET SQL_SELECT_LIMIT=DEFAULT
+		   61 Query	UPDATE `shop`.`employee` t SET t.`LAST_NAME` = '' WHERE t.`FIRST_NAME` LIKE 'xiaoming' ESCAPE '#' AND t.`LAST_NAME` IS NULL AND t.`AGE` = 31 AND t.`SEX` LIKE 'b' ESCAPE '#' AND t.`INCOME` IS NULL
+		   61 Query	SET autocommit=1
+		   61 Query	SET SQL_SELECT_LIMIT=502
+		   61 Query	SELECT t.* FROM shop.employee t
+180123 12:54:17	   70 Connect	root@localhost on shop
+		   70 Query	SET AUTOCOMMIT = 0
+		   70 Query	SELECT * FROM EMPLOYEE WHERE FIRST_NAME= 'Mac'
+		   70 Query	SELECT * FROM EMPLOYEE WHERE INCOME >1000
+		   70 Quit	
+180123 12:54:22	   71 Connect	root@localhost on shop
+		   71 Query	SET AUTOCOMMIT = 0
+		   71 Query	UPDATE EMPLOYEE SET AGE = AGE + 1 WHERE SEX = 'M'
+		   71 Query	COMMIT
+		   71 Quit	
+180123 12:54:25	   61 Query	SET autocommit=1
+		   61 Query	SELECT t.* FROM shop.employee t
+180123 12:54:37	   72 Connect	root@localhost on shop
+		   72 Query	/* mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+		   72 Query	SET NAMES utf8
+		   72 Query	SET autocommit=1
+		   72 Query	SET sql_mode='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES'
+		   72 Query	SET autocommit=1
+		   72 Query	SET autocommit=1
+		   72 Query	use shop
+		   72 Query	select database()
+180123 12:54:52	   72 Query	SET autocommit=1
+		   72 Query	SHOW VARIABLES LIKE 'log_output%'
+		   72 Query	select database()
+180123 12:55:05	   72 Query	SET autocommit=1
+		   72 Query	SHOW VARIABLES
+		   72 Query	select database()
