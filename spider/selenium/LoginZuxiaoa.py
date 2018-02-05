@@ -38,7 +38,7 @@ def getValidate():
 #执行登陆
 def handleLogin(driver,url):
     username = 'gp2015'
-    password = 'gp2015'
+    password = '******'
     driver.get(url)
     cookies = driver.get_cookies()
     #获取账号登陆页面
