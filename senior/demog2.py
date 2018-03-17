@@ -10,3 +10,6 @@ print(isinstance(1234,Iterable))
 
 for i, value in enumerate(['A', 'B', 'C']):
     print(i, value)
+for i,value in enumerate(['成功','失败','骄傲','谦虚']):
+    print(i,value)
+
